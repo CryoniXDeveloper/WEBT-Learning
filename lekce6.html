@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="text-block">
                 Obrázky dělají web vizuálně atraktivním. V HTML se obrázky nevkládají přímo do zdrojového kódu jako text, ale pouze na ně odkazujeme. K tomu se používá nepárový tag <code>&lt;img&gt;</code>. Tento tag sám o sobě nic nedělá, pokud mu pomocí atributu neřekneme, jaký soubor má z disku nebo internetu načíst. Zásadní je také atribut alt, který se zobrazí, pokud se obrázek nenačte, a čtou ho hlasové čtečky pro nevidomé.
             </div>
-            
+
             <div class="code-window">
                 <div class="code-header">
                     <div class="dot dot-r"></div>
@@ -37,6 +37,39 @@
                 </div>
                 <div class="code-content">
                     <span class="code-tag">&lt;img src="pes.jpg" alt="Fotografie hnědého psa na louce"&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Nastavení obrázku v HTML</h2>
+            <div class="text-block">
+                Základní vlastnosti obrázku lze nastavit rovnou v tagu <code>&lt;img&gt;</code> pomocí atributů. Složitější úpravy vzhledu se ale dělají v CSS.
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">width, height</span>
+                    Šířka a výška obrázku v pixelech, např. <code>width="300"</code>. Pokud zadáte jen jeden rozměr, druhý se dopočítá podle poměru stran. Při zadání obou rozměrů je nutné dodržet poměr stran, jinak se obrázek zdeformuje.
+                </li>
+                <li>
+                    <span class="tag-name">alt</span>
+                    Alternativní text, který se zobrazí při chybě načtení a čtou ho čtečky pro nevidomé.
+                </li>
+                <li>
+                    <span class="tag-name">title</span>
+                    Popisek, který se zobrazí po najetí myší na obrázek.
+                </li>
+            </ul>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;img src="pes.jpg" alt="Fotografie hnědého psa na louce" width="300" height="200" title="Můj pes"&gt;</span>
                 </div>
             </div>
         </section>
@@ -82,7 +115,7 @@
                     <span class="code-text">}</span>
                 </div>
             </div>
-            
+
             <ul class="tag-explanation">
                 <li>
                     <span class="tag-name">max-width: 100%</span>
@@ -95,11 +128,17 @@
             </ul>
 
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce6" class="btn-task">Úkol</a>
             </div>
         </section>
+
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

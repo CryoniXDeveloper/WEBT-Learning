@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="text-block">
                 Základním stavebním kamenem celého webdesignu je pochopení takzvaného blokového modelu. Webový prohlížeč vnímá naprosto každý HTML element (odstavec, nadpis, obrázek, odkaz) jako neviditelnou obdélníkovou krabičku (box). Z těchto krabiček se pak skládá celá stránka. Velikost samotného obsahu uvnitř krabičky určujeme pomocí vlastností <strong>width</strong> (šířka) a <strong>height</strong> (výška).
             </div>
-            
+
             <div class="grid-3">
                 <div class="info-box">
                     <h3 class="info-title">Obsah (Content)</h3>
@@ -45,7 +45,7 @@
                 <div class="info-box">
                     <h3 class="info-title">Okraje (Padding / Margin)</h3>
                     <div class="info-text">
-                        Neviditelné deformační zóny kolem obsahu. Určují, jak daleko bude text od rámečku a jak daleko bude celá krabička od ostatních krabiček na webu.
+                        Neviditelné prázdné prostory kolem obsahu. Určují, jak daleko bude text od rámečku a jak daleko bude celá krabička od ostatních krabiček na webu.
                     </div>
                 </div>
             </div>
@@ -85,14 +85,23 @@
                     <span class="tag-name">Zápis okrajů</span>
                     Když zadáme padding: 20px, aplikuje se okraj ze všech 4 stran. Lze ale určit i konkrétní stranu: margin-top, margin-bottom, margin-left, margin-right.
                 </li>
+                <li>
+                    <span class="tag-name">box-sizing</span>
+                    Ve výchozím stavu se padding a rámeček přičítají k nastavené šířce. Karta z ukázky nahoře by tak byla široká 344px (300px + 2 × 20px padding + 2 × 2px rámeček). Hodnota <code>border-box</code> zajistí, že width zahrnuje i padding a rámeček.
+                </li>
             </ul>
 
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce5" class="btn-task">Úkol</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

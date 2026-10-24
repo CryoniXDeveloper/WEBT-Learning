@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="text-block">
                 Během vývoje se CSS na webové stránky aplikovalo třemi různými způsoby. Každý má své přesné využití, i když v moderním vývoji jeden z nich jasně dominuje. Všechny tři formáty dělají tu samou věc, ale s jiným dopadem na organizaci kódu.
             </div>
-            
+
             <div class="grid-3">
                 <div class="info-box">
                     <h3 class="info-title">Externí soubor</h3>
@@ -49,20 +49,44 @@
                     </div>
                 </div>
             </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;head&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;link rel="stylesheet" href="style.css"&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;style&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-text">h1 { color: blue; }</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;/style&gt;</span><br>
+                    <span class="code-tag">&lt;/head&gt;</span><br>
+                    <span class="code-tag">&lt;body&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;h1 style="color: red;"&gt;</span><span class="code-text">Nadpis</span><span class="code-tag">&lt;/h1&gt;</span><br>
+                    <span class="code-tag">&lt;/body&gt;</span>
+                </div>
+            </div>
         </section>
 
         <section class="learning-section animate-scroll">
             <h2 class="section-header">Pravidlo priority</h2>
             <div class="text-block">
-                Pokud prvek stylujeme více způsoby (např. v externím souboru mu dáme modrou barvu a přes řádkový zápis červenou), prohlížeč musí rozhodnout, co má přednost. Řádkový zápis (inline) je vždy "nejsilnější" a přepíše všechny ostatní způsoby. Hned po něm vyhrává to, co bylo prohlížečem načteno později (níže v kódu).
+                Pokud prvek stylujeme více způsoby (např. v externím souboru mu dáme modrou barvu a přes řádkový zápis červenou), prohlížeč musí rozhodnout, co má přednost. Řádkový zápis (inline) má přednost před styly z externího souboru i z hlavičky. Pokud mají dvě pravidla stejnou váhu, vyhrává to, které je v kódu uvedeno později.
             </div>
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce10" class="btn-task">Úkol</a>
             </div>
         </section>
 
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

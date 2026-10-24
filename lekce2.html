@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,12 +28,12 @@
             <div class="text-block">
                 Jazyk HTML (HyperText Markup Language) není programovací jazyk, ale <strong>značkovací jazyk</strong>. Jeho úkolem není počítat nebo rozhodovat, ale strukturovat obsah. Říká prohlížeči: "toto je hlavní nadpis, toto je odstavec, toto je obrázek". HTML používá systém tzv. tagů (značek), které obalují náš text a dávají mu význam. Každý správný HTML dokument musí dodržovat přesně danou kostru, bez které by webové prohlížeče nevěděly, jak stránku správně přečíst.
             </div>
-            
+
             <div class="grid-2">
                 <div class="info-box">
                     <h3 class="info-title">Párové tagy</h3>
                     <div class="info-text">
-                        Většina tagů v HTML je párových. Skládají se z otevírací značky <code>&lt;tag&gt;</code>, samotného obsahu (např. textu) a uzavírací značky s lomítkem <code>&lt;/tag&gt;</code>. Pokud lomítko na konci zapomenete, prohlížeč si bude myslet, že tag pokračuje dál a rozbije to celý web.
+                        Většina tagů v HTML je párových. Skládají se z otevírací značky <code>&lt;tag&gt;</code>, samotného obsahu (např. textu) a uzavírací značky s lomítkem <code>&lt;/tag&gt;</code>. Pokud lomítko na konci zapomenete, prohlížeč si bude myslet, že tag pokračuje dál, a může tím rozbít vzhled celé stránky.
                     </div>
                 </div>
                 <div class="info-box">
@@ -119,11 +119,16 @@
 
             <div class="lesson-nav-bar">
                 <a href="lekce.html" class="btn-return">Vrátit se</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="ukoly.html?kviz=lekce2" class="btn-task">Úkol</a>
             </div>
         </section>
 
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

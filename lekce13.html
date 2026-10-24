@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="text-block">
                 Aby si vaši webovou stránku mohl prohlédnout kdokoli na světě, nemůže zůstat uložena pouze na disku vašeho počítače (ten je totiž většinu času vypnutý). Webové stránky potřebují dva základní prvky k existenci online.
             </div>
-            
+
             <div class="grid-2">
                 <div class="info-box">
                     <h3 class="info-title">Webhosting</h3>
@@ -39,16 +39,20 @@
                 <div class="info-box">
                     <h3 class="info-title">Doména</h3>
                     <div class="info-text">
-                        Křestní jméno vašeho webu, které uživatelé píší do prohlížeče (např. seznam.cz). Slouží jako překladová maska – skrývá složitou IP adresu serveru, kde se reálně nacházejí soubory hostingu.
+                        Křestní jméno vašeho webu, které uživatelé píší do prohlížeče (např. seznam.cz). Díky systému DNS se jméno převede na IP adresu serveru, kde se reálně nacházejí soubory hostingu. Domény se pronajímají u registrátorů, obvykle na jeden rok.
                     </div>
                 </div>
+            </div>
+
+            <div class="text-block">
+                Hosting i doménu lze získat zdarma (s omezeními, například s reklamou nebo s adresou na doméně poskytovatele) nebo za poplatek u komerčních poskytovatelů. Pro statické weby se hodí i služby jako GitHub Pages.
             </div>
         </section>
 
         <section class="learning-section animate-scroll">
             <h2 class="section-header">Kontrola validity zdrojového kódu</h2>
             <div class="text-block">
-                Před ostrým nasazením webu je nutné ověřit, zda kód neobsahuje hrubé syntaktické chyby (neuzavřené tagy, překlepy, staré značky). Tuto kontrolu by měl provést programátor automaticky pomocí služby zvané <strong>Validátor</strong>. Nejznámější organizací, která tvoří standardy webu a provozuje oficiální testovací nástroje (Markup Validation Service), je konsorcium <strong>W3C</strong> (World Wide Web Consortium). Kód bez chyb znamená rychlejší načítání a lepší pozice ve vyhledávačích (Google).
+                Před ostrým nasazením webu je nutné ověřit, zda kód neobsahuje hrubé syntaktické chyby (neuzavřené tagy, překlepy, staré značky). Tuto kontrolu by měl provést programátor automaticky pomocí služby zvané <strong>Validátor</strong>. Nejznámější organizací, která tvoří standardy webu a provozuje oficiální testovací nástroje (Markup Validation Service), je konsorcium <strong>W3C</strong> (World Wide Web Consortium). Validní kód se ve všech prohlížečích chová předvídatelněji a snáze se udržuje. Validátor HTML najdete na validator.w3.org, validátor CSS na jigsaw.w3.org/css-validator.
             </div>
         </section>
 
@@ -57,17 +61,22 @@
             <div class="text-block">
                 Soubory máte na ploše svého počítače a potřebujete je fyzicky dostat do adresáře pronajatého serveru. K tomuto účelu slouží speciální protokol zvaný <strong>FTP</strong> (File Transfer Protocol).
                 <br><br>
-                Pro spojení počítače se serverem si nainstalujete FTP klienta (např. legendární program <strong>FileZilla</strong>, nebo WinSCP). Zadáte přístupové údaje od poskytovatele hostingu a pak jednoduše přetáhnete soubory myší ze své složky rovnou na server. 
+                Pro spojení počítače se serverem si nainstalujete FTP klienta (např. legendární program <strong>FileZilla</strong>, nebo WinSCP). Zadáte přístupové údaje od poskytovatele hostingu a pak jednoduše přetáhnete soubory myší ze své složky rovnou na server. Klasické FTP posílá heslo nešifrovaně, proto se dnes doporučuje zabezpečená varianta SFTP nebo FTPS. 
                 <br><br>
-                <strong>Důležité pravidlo:</strong> Hlavní soubor vaší stránky, který se načte při zadání holé adresy, se musí vždy jmenovat přesně <code>index.html</code>.
+                <strong>Důležité pravidlo:</strong> Hlavní soubor vaší stránky, který se načte při zadání holé adresy, se obvykle musí jmenovat přesně <code>index.html</code>.
             </div>
 
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce13" class="btn-task">Úkol</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

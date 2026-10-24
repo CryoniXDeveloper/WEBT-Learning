@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -22,136 +22,140 @@
     <main class="main-content">
         <h1 class="page-title animate-scroll visible">Plán výuky</h1>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">1. Tvorba statických WWW stránek</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Způsoby tvorby webu, webové prohlížeče a editory, zdrojový kód.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce1.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce1.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">2. Zdrojový kód HTML a jeho struktura</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Struktura a syntaxe HTML dokumentu, základní značky v HTML, komentáře.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce2.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce2.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">3. Kaskádové styly a jejich syntaxe</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Význam, struktura a syntaxe dokumentu CSS, propojení CSS a HTML, selektory, třídy, identifikátory.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce3.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce3.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">4. Text a jeho formátování, pozadí stránky</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Pozadí stránky v CSS, nadpisy, odstavce, formátování textu v CSS.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce4.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce4.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">5. Rozměry, okraje, rámečky</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Blokový model CSS, rozměry elementů, ohraničení, vnější a vnitřní okraje.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce5.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce5.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">6. Obrázky</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Vložení obrázku do HTML dokumentu, absolutní a relativní adresy, nastavení obrázků v HTML, formátování obrázků v CSS.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce6.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce6.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">7. Odkazy</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Hypertextový odkaz, jmenný odkaz, obrázek jako odkaz, formátování odkazů v CSS.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce7.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce7.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">8. Seznamy</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Neuspořádaný seznam, uspořádaný seznam, formátování seznamů v CSS.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce8.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce8.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">9. Tabulky</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Struktura tabulky a její tvorba v HTML, slučování buněk v tabulce, formátování tabulky v CSS.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce9.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce9.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">10. Možnosti zápisu CSS</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Zápis do externího souboru, zápis do hlavičky HTML souboru, řádkový zápis.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce10.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce10.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">11. Tvorba layoutu webové stránky</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Obsahové bloky, jejich nastavení a rozvržení na webu, absolutní a relativní umístění, plovoucí umístění, flexbox.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce11.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce11.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">12. Tvorba tlačítek a navigace</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Povaha elementů a její změna, tvorba tlačítek v CSS, svislá navigace, vodorovná navigace.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce12.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce12.html">Spustit lekci</a>
             </div>
         </div>
 
-        <div class="lesson-card animate-scroll visible">
+        <div class="lesson-card">
             <h2 class="lesson-main-title">13. Publikování webu na internetu</h2>
             <div class="lesson-section">
-                <p style="color: #a5b4fc; font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;">
+                <p class="lesson-desc">
                     Možnosti získání hostingu a doménového jména, kontrola validity zdrojového kódu, přenos souborů na server.
                 </p>
-                <button class="btn-start" onclick="window.location.href='lekce13.html'">Spustit lekci</button>
+                <a class="btn-start" href="lekce13.html">Spustit lekci</a>
             </div>
         </div>
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>

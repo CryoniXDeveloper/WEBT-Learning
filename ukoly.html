@@ -15,7 +15,7 @@
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
             <a class="header" id="headerLekceTab" href="lekce.html">Lekce</a>
-            <a class="header active" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+            <a class="header active" id="headerUkolyTab" href="ukoly.html" aria-current="page">Úkoly</a>
         </nav>
     </header>
 
@@ -23,7 +23,7 @@
         <h1 class="page-title animate-scroll visible">Procvičování znalostí</h1>
 
         <div id="quizMenu" class="quiz-menu animate-scroll visible">
-            
+
             <div class="lesson-card">
                 <h2 class="lesson-main-title">1. Tvorba statických WWW stránek</h2>
                 <div class="lesson-section">
@@ -120,30 +120,39 @@
         <div id="quizActive" class="learning-section quiz-container">
             <div class="quiz-progress" id="quizProgress">Otázka 1 z 3</div>
             <h2 class="section-header" id="quizTitle">Kvíz</h2>
-            
+
             <div id="questionArea" class="quiz-question-box">
                 <div class="quiz-question-text" id="questionText">Zde bude otázka?</div>
-                
+
                 <div id="optionsArea" class="quiz-options">
                 </div>
 
-                <div id="feedbackText" class="quiz-feedback"></div>
-                
+                <div id="feedbackText" class="quiz-feedback" aria-live="polite"></div>
+
                 <div class="quiz-actions">
-                    <button id="btnVerify" class="btn-task" onclick="verifyAnswer()">Ověřit</button>
-                    <button id="btnNext" class="btn-next" style="display: none;" onclick="nextQuestion()">Další otázka →</button>
+                    <button id="btnVerify" class="btn-task" onclick="verifyAnswer()" disabled>Ověřit</button>
+                    <button id="btnNext" class="btn-next" onclick="nextQuestion()">Další otázka →</button>
                 </div>
             </div>
 
             <div id="resultArea" style="display: none;">
                 <div class="quiz-final-score" id="finalScore">Skóre: 3 / 3</div>
-                <button class="btn-return" onclick="closeQuiz()">Ukončit a vrátit se</button>
+                <div class="quiz-result-message" id="resultMessage"></div>
+                <div class="quiz-result-actions">
+                    <button class="btn-next" onclick="restartQuiz()">Zkusit znovu</button>
+                    <a class="btn-task" id="btnLesson" href="lekce.html">Otevřít lekci</a>
+                    <button class="btn-return" onclick="closeQuiz()">Zpět na seznam</button>
+                </div>
             </div>
-            
-            <button class="btn-prev" id="btnAbort" style="margin-top: 30px;" onclick="closeQuiz()">← Zpět na seznam</button>
+
+            <button class="btn-prev" id="btnAbort" onclick="closeQuiz()">← Zpět na seznam</button>
         </div>
 
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>

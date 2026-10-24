@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <div class="text-block">
                 HTML zná dva hlavní druhy seznamů. Oba se skládají z obalovacího tagu, který určuje typ seznamu, a vnitřních tagů, které definují samotné položky. Odrážka nebo číslo se k položce přidá automaticky.
             </div>
-            
+
             <div class="grid-2">
                 <div class="info-box">
                     <h3 class="info-title">Neuspořádaný seznam (UL)</h3>
@@ -82,11 +82,16 @@
             </div>
 
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce8" class="btn-task">Úkol</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

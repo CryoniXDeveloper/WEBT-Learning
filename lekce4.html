@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -48,7 +48,7 @@
         <section class="learning-section animate-scroll">
             <h2 class="section-header">Nadpisy, odstavce a formátování textu v CSS</h2>
             <div class="text-block">
-                Web je z 90 % tvořen textem. Typografie (práce s písmem) je pro úspěšný web naprosto klíčová. Návštěvník musí být schopen text snadno číst, proto nastavujeme dostatečný kontrast, velikost a mezery.
+                Velkou část webu tvoří text. Typografie (práce s písmem) je pro úspěšný web naprosto klíčová. Návštěvník musí být schopen text snadno číst, proto nastavujeme dostatečný kontrast, velikost a mezery.
             </div>
 
             <div class="grid-2">
@@ -64,6 +64,7 @@
                     <h3 class="info-title">Stylování odstavců</h3>
                     <div class="info-text">
                         <strong>font-weight:</strong> tloušťka písma (bold pro tučné, normal pro normální).<br>
+                        <strong>font-style:</strong> styl písma (normal, italic pro kurzívu).<br>
                         <strong>text-align:</strong> zarovnání textu (left, right, center, justify - do bloku).<br>
                         <strong>line-height:</strong> výška řádku. Pro dobrou čitelnost textu se doporučuje hodnota 1.5 nebo 1.6 (mezera mezi řádky).
                     </div>
@@ -97,11 +98,16 @@
 
             <div class="lesson-nav-bar">
                 <a href="lekce.html" class="btn-return">Vrátit se</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="ukoly.html?kviz=lekce4" class="btn-task">Úkol</a>
             </div>
         </section>
 
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

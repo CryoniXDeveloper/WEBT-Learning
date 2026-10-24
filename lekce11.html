@@ -14,7 +14,7 @@
         <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
         <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
         <nav class="header" id="headerNav">
-            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header active" id="headerLekceTab" href="lekce.html" aria-current="page">Lekce</a>
             <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
         </nav>
     </header>
@@ -35,8 +35,8 @@
             <div class="text-block">
                 Historicky první metodou, jak dostat prvky vedle sebe, bylo plovoucí umístění pomocí CSS vlastnosti <code>float: left</code> a <code>float: right</code>. Prvek doslova "odplave" k levému nebo pravému okraji a zbytek textu ho obtéká. Dnes se to využívá už jen výjimečně, právě pro obtékání obrázků textem v článcích.
             </div>
-            
-            <div class="grid-2">
+
+            <div class="grid-3">
                 <div class="info-box">
                     <h3 class="info-title">position: relative</h3>
                     <div class="info-text">
@@ -47,6 +47,12 @@
                     <h3 class="info-title">position: absolute</h3>
                     <div class="info-text">
                         Vytrhne prvek z běžného toku. Prvek se vznáší nad ostatními a můžeme ho umístit přesně na souřadnice pixelů v rámci jeho nejbližšího relativního rodiče. Ostatní prvky na webu dělají, jako by tam absolutní prvek vůbec nebyl.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">position: fixed</h3>
+                    <div class="info-text">
+                        Prvek se připne k oknu prohlížeče a zůstává na stejném místě i při posouvání stránky. Takto je vytvořená například hlavička tohoto webu.
                     </div>
                 </div>
             </div>
@@ -85,11 +91,16 @@
             </ul>
 
             <div class="lesson-nav-bar">
-                <a href="lekce.html" class="btn-return">Vrátit</a>
-                <a href="ukoly.html" class="btn-task">Úkol</a>
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html?kviz=lekce11" class="btn-task">Úkol</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <a href="mailto:pazderam@ekodom.cz">pazderam@ekodom.cz</a>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
