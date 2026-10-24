@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Anta", sans-serif;
 }
 
 :root {
@@ -14,6 +15,7 @@ body {
     background: linear-gradient(135deg, rgb(4, 12, 51) 0%, rgb(0, 4, 20) 100%);
     min-height: 100vh;
     animation: fadeInPage 0.8s ease-out forwards;
+    user-select: none;
 }
 
 @keyframes fadeInPage {
@@ -28,7 +30,6 @@ body {
 }
 
 .anta-regular {
-    font-family: "Anta", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -50,9 +51,7 @@ body {
 .header {
     color: #dadee6;
     text-decoration: none;
-    font-family: "Anta", sans-serif;
     font-size: 30px;
-    user-select: none;
 }
 
 #headerTitle {
@@ -81,7 +80,7 @@ body {
     color: var(--accent);
     font-weight: bold;
     letter-spacing: 2px;
-    animation: pulseGlow 3s infinite alternate ease-in-out;
+    animation: pulseGlow 1s infinite alternate ease-in-out;
     transition: all 0.3s ease;
     cursor: default;
 }
@@ -141,4 +140,128 @@ body {
 
 #headerNav a:active {
     transform: translateY(2px) scale(0.96);
+}
+
+#headerNav a.active {
+    transform: translateY(-5px);
+    color: var(--accent);
+    text-shadow: 0px 0px 15px var(--accent-glow);
+}
+
+#headerNav a.active::after {
+    background-color: var(--accent);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    box-shadow: 0px 0px 12px var(--accent-glow);
+}
+
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 30px;
+    color: #dadee6;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-shadow: 0 0 15px rgba(33, 99, 190, 0.4);
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.home-text {
+    background-color: rgba(0, 8, 20, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(33, 99, 190, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.home-text p {
+    margin-bottom: 20px;
+}
+
+.home-text p:last-child {
+    margin-bottom: 0;
+}
+
+.lesson-card {
+    background-color: rgba(0, 8, 20, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(33, 99, 190, 0.2);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    border-left: 4px solid var(--accent-glow);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 8, 20, 0.7);
+}
+
+.lesson-main-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(218, 222, 230, 0.1);
+    padding-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.lesson-section {
+    margin-top: 20px;
+}
+
+.lesson-subtitle {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.lesson-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.lesson-list li::before {
+    content: '▹'; 
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.lesson-list li:hover {
+    color: #ffffff;
+}
+
+.lesson-list li:hover::before {
+    color: var(--accent-glow);
+    text-shadow: 0 0 15px var(--accent-glow);
+    transform: translateX(3px);
 }
