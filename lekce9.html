@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 9</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Tabulky</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Struktura tabulky v HTML</h2>
+            <div class="text-block">
+                Tabulky v HTML mohou působit zpočátku složitě, protože se neskládají z jednoho tagu, ale z hnízdění několika tagů do sebe. Historicky se tabulky používaly na tvorbu celého rozvržení webu, dnes se striktně používají pouze pro zobrazení tabulkových dat (ceníky, kalendáře).
+            </div>
+            
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">&lt;table&gt;</span>
+                    Hlavní kontejner, který obaluje celou tabulku.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;tr&gt;</span>
+                    Table Row. Vytváří jeden vodorovný řádek tabulky. Všechny buňky musí být zanořeny uvnitř něj.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;th&gt;</span>
+                    Table Header. Buňka hlavičky. Slouží k popisu sloupce (např. "Cena"). Text je ve výchozím stavu tučný a vycentrovaný.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;td&gt;</span>
+                    Table Data. Běžná buňka obsahující samotná data.
+                </li>
+            </ul>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Slučování buněk</h2>
+            <div class="text-block">
+                Pokud chceme, aby se buňka roztáhla přes více polí (stejně jako funkce Merge v Excelu), používáme atributy přímo v HTML tagu <code>&lt;td&gt;</code>. Atribut <code>colspan="2"</code> sloučí buňku přes dva sloupce vodorovně. Atribut <code>rowspan="3"</code> roztáhne buňku přes tři řádky dolů. Zbylé buňky, přes které se sloučení provedlo, se z kódu musí smazat.
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Formátování tabulky v CSS</h2>
+            <div class="text-block">
+                Ve výchozím stavu HTML nevykresluje tabulkám žádné okraje a buňky jsou na sebe natlačené. Pomocí CSS nastavujeme tabulce šířku, vnitřní odsazení buněk (padding) a rámečky. Klíčová je vlastnost <code>border-collapse: collapse;</code>, která zruší zdvojené čáry mezi buňkami.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">table {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">width:</span> <span class="code-text">100%;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">border-collapse:</span> <span class="code-text">collapse;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-text">th, td {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">border:</span> <span class="code-text">1px solid white;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">padding:</span> <span class="code-text">15px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">text-align:</span> <span class="code-text">left;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

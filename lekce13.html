@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 13</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Publikování webu na internetu</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Hosting a doménové jméno</h2>
+            <div class="text-block">
+                Aby si vaši webovou stránku mohl prohlédnout kdokoli na světě, nemůže zůstat uložena pouze na disku vašeho počítače (ten je totiž většinu času vypnutý). Webové stránky potřebují dva základní prvky k existenci online.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Webhosting</h3>
+                    <div class="info-text">
+                        Fyzický prostor na internetu. Pronajmete si část pevného disku na specializovaném počítači (serveru), který běží 24 hodin denně 7 dní v týdnu a je připojen k páteřní síti vysokorychlostním připojením.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Doména</h3>
+                    <div class="info-text">
+                        Křestní jméno vašeho webu, které uživatelé píší do prohlížeče (např. seznam.cz). Slouží jako překladová maska – skrývá složitou IP adresu serveru, kde se reálně nacházejí soubory hostingu.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Kontrola validity zdrojového kódu</h2>
+            <div class="text-block">
+                Před ostrým nasazením webu je nutné ověřit, zda kód neobsahuje hrubé syntaktické chyby (neuzavřené tagy, překlepy, staré značky). Tuto kontrolu by měl provést programátor automaticky pomocí služby zvané <strong>Validátor</strong>. Nejznámější organizací, která tvoří standardy webu a provozuje oficiální testovací nástroje (Markup Validation Service), je konsorcium <strong>W3C</strong> (World Wide Web Consortium). Kód bez chyb znamená rychlejší načítání a lepší pozice ve vyhledávačích (Google).
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Přenos souborů na server (FTP)</h2>
+            <div class="text-block">
+                Soubory máte na ploše svého počítače a potřebujete je fyzicky dostat do adresáře pronajatého serveru. K tomuto účelu slouží speciální protokol zvaný <strong>FTP</strong> (File Transfer Protocol).
+                <br><br>
+                Pro spojení počítače se serverem si nainstalujete FTP klienta (např. legendární program <strong>FileZilla</strong>, nebo WinSCP). Zadáte přístupové údaje od poskytovatele hostingu a pak jednoduše přetáhnete soubory myší ze své složky rovnou na server. 
+                <br><br>
+                <strong>Důležité pravidlo:</strong> Hlavní soubor vaší stránky, který se načte při zadání holé adresy, se musí vždy jmenovat přesně <code>index.html</code>.
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

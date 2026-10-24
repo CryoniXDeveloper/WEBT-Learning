@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Text a jeho formátování, pozadí stránky</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Pozadí stránky v CSS</h2>
+            <div class="text-block">
+                Jednou z prvních věcí, které při tvorbě designu webu nastavujeme, je pozadí. Tradičně se pozadí nastavuje přímo na tag <code>&lt;body&gt;</code>, čímž se zbarví celá viditelná plocha prohlížeče. K dispozici máme buď plné barvy, barevné přechody (gradienty), nebo obrázky.
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">background-color</span>
+                    Definuje plnou barvu pozadí. Barvu můžeme zapsat anglickým slovem (red, blue), hexadecimálním kódem (např. #ff0000) nebo pomocí rgb() a rgba() pro průhlednost.
+                </li>
+                <li>
+                    <span class="tag-name">background-image</span>
+                    Umožňuje nastavit obrázek na pozadí pomocí funkce url('cesta/k/obrazku.jpg'). Pokud je obrázek menší než obrazovka, automaticky se začne opakovat jako dlaždice.
+                </li>
+                <li>
+                    <span class="tag-name">background-size</span>
+                    Řeší problém s velikostí obrázku na pozadí. Hodnota <strong>cover</strong> zajistí, že obrázek pokryje celou plochu (případně se ořízne), hodnota <strong>contain</strong> zajistí, že bude vidět celý, i za cenu prázdných pruhů po stranách.
+                </li>
+            </ul>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Nadpisy, odstavce a formátování textu v CSS</h2>
+            <div class="text-block">
+                Web je z 90 % tvořen textem. Typografie (práce s písmem) je pro úspěšný web naprosto klíčová. Návštěvník musí být schopen text snadno číst, proto nastavujeme dostatečný kontrast, velikost a mezery.
+            </div>
+
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Základní vlastnosti písma</h3>
+                    <div class="info-text">
+                        <strong>color:</strong> mění barvu samotného textu.<br>
+                        <strong>font-size:</strong> velikost písma (nejčastěji v pixelech - px, nebo v relativních jednotkách rem). Výchozí velikost odstavce v prohlížečích je 16px.<br>
+                        <strong>font-family:</strong> druh písma (Arial, Roboto, Times New Roman).
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Stylování odstavců</h3>
+                    <div class="info-text">
+                        <strong>font-weight:</strong> tloušťka písma (bold pro tučné, normal pro normální).<br>
+                        <strong>text-align:</strong> zarovnání textu (left, right, center, justify - do bloku).<br>
+                        <strong>line-height:</strong> výška řádku. Pro dobrou čitelnost textu se doporučuje hodnota 1.5 nebo 1.6 (mezera mezi řádky).
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">/* Kompletní úprava vzhledu článku */</span><br>
+                    <span class="code-text">body {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">background-color:</span> <span class="code-text">#f4f4f4;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">font-family:</span> <span class="code-text">Arial, Helvetica, sans-serif;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-text">h1 {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">#333333;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">text-align:</span> <span class="code-text">center;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">font-size:</span> <span class="code-text">36px;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-text">p {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">#555555;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">line-height:</span> <span class="code-text">1.6;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">font-size:</span> <span class="code-text">18px;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

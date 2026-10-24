@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Zdrojový kód HTML a jeho struktura</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Struktura a syntaxe HTML dokumentu</h2>
+            <div class="text-block">
+                Jazyk HTML (HyperText Markup Language) není programovací jazyk, ale <strong>značkovací jazyk</strong>. Jeho úkolem není počítat nebo rozhodovat, ale strukturovat obsah. Říká prohlížeči: "toto je hlavní nadpis, toto je odstavec, toto je obrázek". HTML používá systém tzv. tagů (značek), které obalují náš text a dávají mu význam. Každý správný HTML dokument musí dodržovat přesně danou kostru, bez které by webové prohlížeče nevěděly, jak stránku správně přečíst.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Párové tagy</h3>
+                    <div class="info-text">
+                        Většina tagů v HTML je párových. Skládají se z otevírací značky <code>&lt;tag&gt;</code>, samotného obsahu (např. textu) a uzavírací značky s lomítkem <code>&lt;/tag&gt;</code>. Pokud lomítko na konci zapomenete, prohlížeč si bude myslet, že tag pokračuje dál a rozbije to celý web.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Nepárové tagy</h3>
+                    <div class="info-text">
+                        Některé prvky nemají žádný textový obsah, který by bylo potřeba obalovat. Například obrázek nebo zalomení řádku. Tyto tagy se zapisují pouze jednou značkou, např. <code>&lt;img&gt;</code> pro obrázek nebo <code>&lt;br&gt;</code> pro nový řádek.
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;!DOCTYPE html&gt;</span><br>
+                    <span class="code-tag">&lt;html lang="cs"&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;head&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;meta charset="UTF-8"&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;title&gt;</span><span class="code-text">Moje první stránka</span><span class="code-tag">&lt;/title&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;/head&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;body&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span><span class="code-text">Vítejte na mém webu</span><span class="code-tag">&lt;/h1&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span><span class="code-text">Toto je ukázkový text, který se zobrazí návštěvníkovi.</span><span class="code-tag">&lt;/p&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;/body&gt;</span><br>
+                    <span class="code-tag">&lt;/html&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Základní značky a atributy</h2>
+            <div class="text-block">
+                Aby měly tagy další specifické vlastnosti (například aby odkaz věděl, kam má směřovat, nebo obrázek věděl, jaký soubor má načíst), používáme <strong>atributy</strong>. Atribut se píše vždy pouze do otevíracího tagu, hned za jeho název, a skládá se ze jména atributu a jeho hodnoty v uvozovkách: <code>&lt;tag atribut="hodnota"&gt;</code>.
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">Nadpisy &lt;h1&gt; až &lt;h6&gt;</span>
+                    Heading. Definují nadpisy od nejdůležitějšího (h1) po nejméně důležitý (h6). Tag &lt;h1&gt; by měl být na stránce z hlediska SEO (optimalizace pro vyhledávače) vždy pouze jeden.
+                </li>
+                <li>
+                    <span class="tag-name">Odstavec &lt;p&gt;</span>
+                    Paragraph. Slouží k obalení běžného souvislého textu. Prohlížeč automaticky přidá před a za odstavec prázdné místo, aby byl text čitelný.
+                </li>
+                <li>
+                    <span class="tag-name">Zalomení &lt;br&gt;</span>
+                    Break. Nepárový tag. Prohlížeče normálně ignorují, když v kódu zmáčknete Enter. Pokud chcete text natvrdo zalomit na nový řádek uprostřed odstavce, musíte použít tento tag.
+                </li>
+                <li>
+                    <span class="tag-name">Kontejner &lt;div&gt;</span>
+                    Division. Univerzální blokový prvek. Sám o sobě nic nedělá a nijak nevypadá, ale používá se ke sdružování jiných prvků do logických celků (např. obalení celého článku nebo vytvoření sloupce).
+                </li>
+            </ul>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Komentáře v HTML</h2>
+            <div class="text-block">
+                Během vývoje složitějších webů se kód rychle stává nepřehledným. Proto existují komentáře. Jsou to speciální značky, do kterých si programátor může psát poznámky, strukturovat si s nimi kód (např. označit si "zde začíná hlavička", "zde začíná patička"), nebo pomocí nich dočasně "vypnout" kus kódu, který zrovna nechce smazat, ale nechce ho ani zobrazovat na webu.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;!-- Toto je HTML komentář. Cokoliv je uvnitř, návštěvník webu neuvidí. --&gt;</span><br><br>
+                    <span class="code-tag">&lt;!-- Začátek navigačního menu --&gt;</span><br>
+                    <span class="code-tag">&lt;nav&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-text">Odkazy menu...</span><br>
+                    <span class="code-tag">&lt;/nav&gt;</span><br>
+                    <span class="code-tag">&lt;!-- Konec navigačního menu --&gt;</span><br><br>
+                    <span class="code-tag">&lt;!--</span><br>
+                    <span class="code-tag">&lt;p&gt;</span><span class="code-text">Tento odstavec jsem dočasně schoval, dokud neschválí text.</span><span class="code-tag">&lt;/p&gt;</span><br>
+                    <span class="code-tag">--&gt;</span>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

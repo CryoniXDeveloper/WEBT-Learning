@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Seznamy</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Neuspořádaný a uspořádaný seznam</h2>
+            <div class="text-block">
+                HTML zná dva hlavní druhy seznamů. Oba se skládají z obalovacího tagu, který určuje typ seznamu, a vnitřních tagů, které definují samotné položky. Odrážka nebo číslo se k položce přidá automaticky.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Neuspořádaný seznam (UL)</h3>
+                    <div class="info-text">
+                        Unordered List. Tvoří se tagem <code>&lt;ul&gt;</code>. Používá se pro výčty, kde nezáleží na pořadí (nákupní seznam). Výchozím znakem je černý puntík.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Uspořádaný seznam (OL)</h3>
+                    <div class="info-text">
+                        Ordered List. Tvoří se tagem <code>&lt;ol&gt;</code>. Používá se tam, kde je nutná posloupnost (např. recept, postup instalace). Výchozím znakem je číslo.
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;ul&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;li&gt;</span><span class="code-text">První položka seznamu</span><span class="code-tag">&lt;/li&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;li&gt;</span><span class="code-text">Druhá položka seznamu</span><span class="code-tag">&lt;/li&gt;</span><br>
+                    <span class="code-tag">&lt;/ul&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Formátování seznamů v CSS</h2>
+            <div class="text-block">
+                Pomocí CSS vlastnosti <code>list-style-type</code> můžeme zcela změnit chování odrážek. U neuspořádaných můžeme mít čtverečky (square) nebo prázdná kolečka (circle). U uspořádaných lze nastavit římské číslice (upper-roman) nebo písmena (lower-alpha).
+                Nejčastější použití je ale hodnota <code>none</code>, která odrážky zcela odstraní – to se používá při tvorbě navigačních menu.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">ul {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">list-style-type:</span> <span class="code-text">none;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">padding:</span> <span class="code-text">0;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">margin:</span> <span class="code-text">0;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

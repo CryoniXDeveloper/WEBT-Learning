@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Odkazy</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Hypertextový a jmenný odkaz</h2>
+            <div class="text-block">
+                Odkazy dělají z obyčejného textu síť (World Wide Web). K jejich vytvoření slouží párový tag <code>&lt;a&gt;</code>. To, kam má odkaz směřovat, určuje atribut <code>href</code>.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Klasický odkaz</h3>
+                    <div class="info-text">
+                        Směřuje na jinou stránku. Příklad: <code>&lt;a href="stranka.html"&gt;Klikni sem&lt;/a&gt;</code>. Pokud chceme, aby se otevřel v novém okně, přidáme atribut <code>target="_blank"</code>.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Jmenný odkaz (Kotva)</h3>
+                    <div class="info-text">
+                        Nasměruje uživatele na konkrétní místo na téže stránce. Prvku, kam chceme skočit, přiřadíme ID (např. <code>id="sekce3"</code>) a odkaz vytvoříme jako <code>&lt;a href="#sekce3"&gt;</code>.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Obrázek jako odkaz</h2>
+            <div class="text-block">
+                Odkazem nemusí být pouze text. Jakýkoliv prvek, který vložíme mezi tagy <code>&lt;a&gt;</code> a <code>&lt;/a&gt;</code>, se stane klikacím. Nejčastěji se takto tvoří klikací loga nebo galerie.
+            </div>
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;a href="index.html"&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;img src="logo.png" alt="Logo webu"&gt;</span><br>
+                    <span class="code-tag">&lt;/a&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Formátování odkazů v CSS</h2>
+            <div class="text-block">
+                Ve výchozím stavu prohlížeče vykreslují odkazy modře a s podtržením, a pokud je navštívíte, zfialoví. Pro moderní design toto musíme přepsat. Pomocí pseudotříd můžeme dokonce nastavit, jak má odkaz vypadat, když na něj najedeme myší.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">a {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">text-decoration:</span> <span class="code-text">none;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">#2163be;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-text">a:hover {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">#ff5100;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Kaskádové styly a jejich syntaxe</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Význam, struktura a syntaxe CSS</h2>
+            <div class="text-block">
+                HTML samotné je velmi ošklivé – černý text na bílém pozadí bez jakéhokoliv rozvržení. Zde přichází na scénu <strong>CSS (Cascading Style Sheets)</strong>. Je to jazyk, který prohlížeči říká, JAK se mají HTML prvky vykreslit. Díky CSS můžeme měnit barvy, velikosti písma, tvořit složité layouty (rozvržení), animace a přizpůsobovat web pro mobilní telefony.
+                <br><br>
+                Zápis (pravidlo) v CSS se skládá ze dvou hlavních částí: <strong>Selektoru</strong> (kdo se má změnit) a <strong>Deklaračního bloku ve složených závorkách</strong> (jak se má změnit). Každá deklarace uvnitř bloku končí středníkem!
+            </div>
+            
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">/* Struktura CSS pravidla */</span><br>
+                    <span class="code-text">selektor {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">vlastnost:</span> <span class="code-text">hodnota;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">dalsi-vlastnost:</span> <span class="code-text">hodnota;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-tag">/* Reálná ukázka: Obarvení všech nadpisů h1 na modro */</span><br>
+                    <span class="code-text">h1 {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">blue;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">font-size:</span> <span class="code-text">24px;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Propojení CSS a HTML</h2>
+            <div class="text-block">
+                Aby prohlížeč věděl, jaké styly má na HTML dokument aplikovat, musíme tyto dva soubory propojit. Nejlepší, nejprofesionálnější a nejpoužívanější způsob je vytvořit samostatný soubor (např. <code>style.css</code>) a na ten v HTML dokumentu odkázat. Tento odkaz se umísťuje do hlavičky <code>&lt;head&gt;</code> pomocí nepárového tagu <code>&lt;link&gt;</code>.
+                Díky tomu můžeme mít jeden CSS soubor, který řídí vzhled třeba tisíce HTML stránek najednou (celého e-shopu).
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;head&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;title&gt;</span><span class="code-text">Můj Web</span><span class="code-tag">&lt;/title&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;!-- Atribut rel říká, že jde o stylopis (stylesheet), href ukazuje cestu --&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;link rel="stylesheet" href="style.css"&gt;</span><br>
+                    <span class="code-tag">&lt;/head&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Selektory, třídy a identifikátory</h2>
+            <div class="text-block">
+                Selektory jsou nesmírně důležité. Určují, na jaké HTML tagy se má daný CSS kód aplikovat. Pokud použijeme pouhý název tagu (např. <code>p</code>), aplikuje se styl na VŠECHNY odstavce na webu. Co když ale chceme mít jeden odstavec červený jako varování a zbytek normální? K tomu slouží Třídy (Classes) a Identifikátory (ID).
+            </div>
+
+            <div class="grid-3">
+                <div class="info-box">
+                    <h3 class="info-title">Selektor Tagu</h3>
+                    <div class="info-text">
+                        Zápis bez tečky nebo křížku, např. <code>button { color: red; }</code>. Vybere a upraví absolutně všechna tlačítka v dokumentu. Používá se pro globální nastavení výchozího vzhledu webu.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Třída (.class)</h3>
+                    <div class="info-text">
+                        Zapisuje se s tečkou, např. <code>.varovani { color: red; }</code>. V HTML pak napíšeme <code>&lt;p class="varovani"&gt;</code>. Třídu můžeme na jedné stránce použít kolikrát chceme na různé prvky.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Identifikátor (#id)</h3>
+                    <div class="info-text">
+                        Zapisuje se s křížkem, např. <code>#hlavni-nadpis { color: blue; }</code>. V HTML pak <code>&lt;h1 id="hlavni-nadpis"&gt;</code>. ID musí být unikátní! Lze jej na stránce použít <strong>pouze a jenom jednou</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit se</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

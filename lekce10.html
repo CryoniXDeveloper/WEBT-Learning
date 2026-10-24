@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 10</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Možnosti zápisu CSS</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Tři cesty pro styling</h2>
+            <div class="text-block">
+                Během vývoje se CSS na webové stránky aplikovalo třemi různými způsoby. Každý má své přesné využití, i když v moderním vývoji jeden z nich jasně dominuje. Všechny tři formáty dělají tu samou věc, ale s jiným dopadem na organizaci kódu.
+            </div>
+            
+            <div class="grid-3">
+                <div class="info-box">
+                    <h3 class="info-title">Externí soubor</h3>
+                    <div class="info-text">
+                        Kód je zapsán ve zcela odděleném souboru (style.css). HTML na něj pouze odkazuje přes tag <code>&lt;link&gt;</code>. Toto je průmyslový standard. Kód je extrémně přehledný.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Zápis do hlavičky</h3>
+                    <div class="info-text">
+                        Styl se píše přímo do HTML souboru dovnitř párového tagu <code>&lt;style&gt;</code>, který leží v sekci head. Používá se pouze pro jednostránkové weby nebo rychlé prototypy.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Řádkový zápis</h3>
+                    <div class="info-text">
+                        Odborně tzv. "Inline styly". Styl se píše přes atribut přímo k danému tagu, např. <code>&lt;h1 style="color: red;"&gt;</code>. Nejhůře spravovatelný způsob, v čistém kódu se mu vyhýbáme.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Pravidlo priority</h2>
+            <div class="text-block">
+                Pokud prvek stylujeme více způsoby (např. v externím souboru mu dáme modrou barvu a přes řádkový zápis červenou), prohlížeč musí rozhodnout, co má přednost. Řádkový zápis (inline) je vždy "nejsilnější" a přepíše všechny ostatní způsoby. Hned po něm vyhrává to, co bylo prohlížečem načteno později (níže v kódu).
+            </div>
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

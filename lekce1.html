@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Celá Lekce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Tvorba statických WWW stránek</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">1. Způsoby tvorby webu</h2>
+            <div class="text-block">
+                Webová stránka je v základu pouze textový dokument, který obsahuje speciální značky. Dnes ale existuje více přístupů, jak takový dokument vytvořit. Volba správného přístupu závisí na rozpočtu, technických znalostech a požadavcích na výsledný projekt. V praxi se nejčastěji setkáme se třemi hlavními směry.
+            </div>
+            
+            <div class="grid-3">
+                <div class="info-box">
+                    <h3 class="info-title">Čisté kódování</h3>
+                    <div class="info-text">
+                        Psaní zdrojového kódu od nuly pomocí HTML, CSS a JavaScriptu. Tento způsob nabízí absolutní kontrolu nad každým pixelem a maximální rychlost. Vyžaduje technické znalosti, ale je to základ, na kterém stojí všechny ostatní systémy.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Redakční systémy (CMS)</h3>
+                    <div class="info-text">
+                        Content Management Systems, jako je WordPress nebo Joomla. Oddělují design od obsahu. Programátor vytvoří šablonu a běžný uživatel pak přidává články přes administraci bez znalosti kódu.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Webové generátory</h3>
+                    <div class="info-text">
+                        Nástroje typu Wix nebo Webnode. Fungují na principu drag-and-drop. Uživatel si vybere hotovou šablonu a vizuálně si ji upraví. Nejrychlejší cesta k webu, ale s omezenými funkcemi.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">2. Webové prohlížeče a editory</h2>
+            <div class="text-block">
+                Při vývoji webu fungujeme ve smyčce dvou programů. V <span class="highlight">textovém editoru</span> píšeme kód, dokument uložíme a následně ho otevřeme ve <span class="highlight">webovém prohlížeči</span>, abychom viděli výsledek.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Vývojové editory (IDE)</h3>
+                    <div class="info-text">
+                        V praxi se používají specializované editory. Průmyslovým standardem je aktuálně <strong>Visual Studio Code</strong> nebo <strong>Sublime Text</strong>. Nabízí barevné zvýrazňování syntaxe a automatické doplňování kódu.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Webové prohlížeče</h3>
+                    <div class="info-text">
+                        Google Chrome, Firefox, Safari. Každý prohlížeč obsahuje renderovací jádro, které matematicky počítá, jak a kde se má prvek zobrazit. Zásadní jsou <strong>Vývojářské nástroje</strong> (klávesa F12) pro ladění chyb.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">3. Zdrojový kód a jeho struktura</h2>
+            <div class="text-block">
+                Základem webu je jazyk <strong>HTML</strong> (HyperText Markup Language). Je to značkovací jazyk, který popisuje strukturu dokumentu pomocí <strong>tagů</strong> (značek) zapsaných ve špičatých závorkách.
+            </div>
+            
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;!DOCTYPE html&gt;</span><br>
+                    <span class="code-tag">&lt;html lang="cs"&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;head&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;meta charset="UTF-8"&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;title&gt;</span><span class="code-text">Můj První Web</span><span class="code-tag">&lt;/title&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;/head&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;body&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span><span class="code-text">Hello world!</span><span class="code-tag">&lt;/h1&gt;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;p&gt;</span><span class="code-text">Toto je první odstavec na mé stránce.</span><span class="code-tag">&lt;/p&gt;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">&lt;/body&gt;</span><br>
+                    <span class="code-tag">&lt;/html&gt;</span>
+                </div>
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">&lt;!DOCTYPE&gt;</span>
+                    Deklarace typu dokumentu na prvním řádku. Říká prohlížeči, že používáme moderní HTML5.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;html&gt;</span>
+                    Kořenový tag, do kterého je zabalen úplně celý zbytek webu.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;head&gt;</span>
+                    Hlavička dokumentu. Obsahuje data pro vyhledávače a odkazy na styly. Obsah hlavičky není na stránce fyzicky vidět.
+                </li>
+                <li>
+                    <span class="tag-name">&lt;body&gt;</span>
+                    Tělo dokumentu. Sem patří vše, co má návštěvník vidět – texty, obrázky, tabulky a tlačítka.
+                </li>
+            </ul>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

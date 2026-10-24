@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 12</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Tvorba tlačítek a navigace</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Povaha elementů a její změna</h2>
+            <div class="text-block">
+                Základní problém při stylování odkazů spočívá v jejich povaze. Tag <code>&lt;a&gt;</code> je od přírody <strong>řádkový (inline) element</strong>. To znamená, že na něj nefungují vlastnosti jako width, height ani vertikální padding/margin s fyzickým odtlačením okolí. Pokud chceme z obyčejného textového odkazu vytvořit masivní klikací tlačítko, musíme jeho povahu změnit. 
+                <br><br>
+                Použijeme vlastnost <code>display: block</code> nebo <code>display: inline-block</code>. Tím odkaz získá vlastnosti obdélníkové krabičky a začne reagovat na rozměry a okraje.
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Tvorba tlačítek v CSS</h2>
+            <div class="text-block">
+                Tlačítko vytvoříme tak, že řádkovému odkazu zrušíme podtržení, přidáme vnitřní okraje, nastavíme výraznou barvu pozadí a změníme kurzor. Pro interaktivitu využíváme pseudotřídu <code>:hover</code>, která se aktivuje ve chvíli, kdy nad prvek najede myš.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">.tlacitko {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">display:</span> <span class="code-text">inline-block;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">text-decoration:</span> <span class="code-text">none;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">background-color:</span> <span class="code-text">#00b85c;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">color:</span> <span class="code-text">white;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">padding:</span> <span class="code-text">10px 25px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">border-radius:</span> <span class="code-text">6px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">transition:</span> <span class="code-text">all 0.3s ease;</span><br>
+                    <span class="code-text">}</span><br><br>
+                    <span class="code-text">.tlacitko:hover {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">background-color:</span> <span class="code-text">#00d66b;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Svislá a vodorovná navigace</h2>
+            <div class="text-block">
+                Základem každého navigačního menu na webu je prostý seznam <code>&lt;ul&gt;</code> obsahující položky <code>&lt;li&gt;</code> s odkazy. Proč seznam? Protože menu je logický "výčet odkazů". 
+                Pro vytvoření <strong>svislé navigace</strong> (sidebar) pouze odstraníme odrážky přes <code>list-style-type: none</code> a okraje z <code>&lt;ul&gt;</code>. 
+                <br><br>
+                Pro vytvoření klasické <strong>vodorovné navigace</strong> v hlavičce navíc aplikujeme na <code>&lt;ul&gt;</code> technologii <code>display: flex</code>, což okamžitě poskládá všechny položky seznamu vedle sebe do jednoho plynulého řádku.
+            </div>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

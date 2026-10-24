@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Rozměry, okraje, rámečky</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Blokový model CSS (Box Model)</h2>
+            <div class="text-block">
+                Základním stavebním kamenem celého webdesignu je pochopení takzvaného blokového modelu. Webový prohlížeč vnímá naprosto každý HTML element (odstavec, nadpis, obrázek, odkaz) jako neviditelnou obdélníkovou krabičku (box). Z těchto krabiček se pak skládá celá stránka. Velikost samotného obsahu uvnitř krabičky určujeme pomocí vlastností <strong>width</strong> (šířka) a <strong>height</strong> (výška).
+            </div>
+            
+            <div class="grid-3">
+                <div class="info-box">
+                    <h3 class="info-title">Obsah (Content)</h3>
+                    <div class="info-text">
+                        Samotné jádro krabičky. Je to prostor, kde se fyzicky nachází text, obrázek nebo video. Právě na tuto část se aplikují rozměry width a height.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Rámeček (Border)</h3>
+                    <div class="info-text">
+                        Linka, která celou krabičku obaluje. Může být neviditelná, plná, čárkovaná nebo tečkovaná. Odděluje vnitřní prostor elementu od vnějšího okolí.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Okraje (Padding / Margin)</h3>
+                    <div class="info-text">
+                        Neviditelné deformační zóny kolem obsahu. Určují, jak daleko bude text od rámečku a jak daleko bude celá krabička od ostatních krabiček na webu.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Vnitřní a vnější okraje (Padding vs Margin)</h2>
+            <div class="text-block">
+                Rozdíl mezi těmito dvěma vlastnostmi je pro začátečníky často matoucí, ale je naprosto klíčový. <strong>Padding</strong> (vnitřní okraj) představuje vycpávku uvnitř krabičky. Odtlačuje obsah (text) směrem dovnitř od rámečku. Pokud má element nastavenou barvu pozadí, padding bude mít tuto barvu také. 
+                <br><br>
+                Naopak <strong>Margin</strong> (vnější okraj) je prostor ZVENKU rámečku. Funguje jako ochranná bublina, která odtlačuje sousední elementy pryč. Margin je vždy 100% průhledný a nelze mu nastavit barvu.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">.informacni-karta {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">width:</span> <span class="code-text">300px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">background-color:</span> <span class="code-text">#2163be;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">padding:</span> <span class="code-text">20px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">margin:</span> <span class="code-text">15px;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">border:</span> <span class="code-text">2px solid white;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">border</span>
+                    Sdružená vlastnost, která definuje tloušťku (2px), styl (solid - plná čára) a barvu (white). Styl může být také dashed (čárkovaný) nebo dotted (tečkovaný).
+                </li>
+                <li>
+                    <span class="tag-name">Zápis okrajů</span>
+                    Když zadáme padding: 20px, aplikuje se okraj ze všech 4 stran. Lze ale určit i konkrétní stranu: margin-top, margin-bottom, margin-left, margin-right.
+                </li>
+            </ul>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

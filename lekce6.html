@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Obrázky</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Vložení obrázku do HTML dokumentu</h2>
+            <div class="text-block">
+                Obrázky dělají web vizuálně atraktivním. V HTML se obrázky nevkládají přímo do zdrojového kódu jako text, ale pouze na ně odkazujeme. K tomu se používá nepárový tag <code>&lt;img&gt;</code>. Tento tag sám o sobě nic nedělá, pokud mu pomocí atributu neřekneme, jaký soubor má z disku nebo internetu načíst. Zásadní je také atribut alt, který se zobrazí, pokud se obrázek nenačte, a čtou ho hlasové čtečky pro nevidomé.
+            </div>
+            
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-tag">&lt;img src="pes.jpg" alt="Fotografie hnědého psa na louce"&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Absolutní a relativní adresy</h2>
+            <div class="text-block">
+                Při zadávání cesty k obrázku (atribut src) se musíme rozhodnout, odkud obrázek bereme.
+            </div>
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">Absolutní adresa</h3>
+                    <div class="info-text">
+                        Odkazuje na přesné místo kdekoli na internetu. Vždy začíná protokolem http:// nebo https://. Příklad: <code>src="https://domena.cz/obrazek.png"</code>. Výhodou je, že obrázek nemusíte mít u sebe, nevýhodou, že pokud ho cizí web smaže, zmizí i vám.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">Relativní adresa</h3>
+                    <div class="info-text">
+                        Odkazuje na soubor vzhledem k aktuálnímu HTML dokumentu. Příklad: <code>src="obrazky/logo.png"</code>. Tento způsob se používá pro všechny obrázky, které tvoří design vašeho webu a nahráváte si je na server sami.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Nastavení a formátování v CSS</h2>
+            <div class="text-block">
+                Obrázky mohou být v původním rozlišení obrovské a rozbít celý layout. Pomocí CSS je můžeme přizpůsobit našim potřebám, zaoblit jim rohy nebo je oříznout do kruhu.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">img {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">max-width:</span> <span class="code-text">100%;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">height:</span> <span class="code-text">auto;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">border-radius:</span> <span class="code-text">15px;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+            
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">max-width: 100%</span>
+                    Zajistí, že obrázek nikdy nepřeteče svého rodiče (např. mobilní displej), ale zmenší se podle něj.
+                </li>
+                <li>
+                    <span class="tag-name">border-radius</span>
+                    Vytváří zaoblené rohy. Pokud použijete hodnotu 50% u čtvercového obrázku, vytvoří se dokonalý kruh (často používané pro profilové fotky).
+                </li>
+            </ul>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

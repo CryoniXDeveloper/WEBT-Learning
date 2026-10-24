@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBT Učení - Lekce 11</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <a class="header" href="index.html" id="headerTitle">WEBT Učení</a>
+        <div class="header" id="headerLogo">&lt;WEBT&gt; HTML a CSS &lt;/WEBT&gt;</div>
+        <nav class="header" id="headerNav">
+            <a class="header active" id="headerLekceTab" href="lekce.html">Lekce</a>
+            <a class="header" id="headerUkolyTab" href="ukoly.html">Úkoly</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <a href="lekce.html" class="back-btn">← Zpět na přehled lekcí</a>
+        <h1 class="page-title animate-scroll visible">Tvorba layoutu webové stránky</h1>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Obsahové bloky a běžný tok dokumentu</h2>
+            <div class="text-block">
+                Webové stránky nejsou jen jedním dlouhým textem, ale jsou rozděleny do logických sekcí (hlavička, menu, hlavní obsah, postranní panel, patička). K definování těchto obsahových sekcí používáme primárně tag <code>&lt;div&gt;</code>. Ve výchozím stavu se všechny tyto blokové elementy skládají v prohlížeči pod sebe (odshora dolů). Tomuto chování říkáme běžný tok dokumentu (Normal Flow). Pokud chceme prvky umístit vedle sebe, musíme použít techniky layoutu.
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Umístění: Relativní, Absolutní a Plovoucí</h2>
+            <div class="text-block">
+                Historicky první metodou, jak dostat prvky vedle sebe, bylo plovoucí umístění pomocí CSS vlastnosti <code>float: left</code> a <code>float: right</code>. Prvek doslova "odplave" k levému nebo pravému okraji a zbytek textu ho obtéká. Dnes se to využívá už jen výjimečně, právě pro obtékání obrázků textem v článcích.
+            </div>
+            
+            <div class="grid-2">
+                <div class="info-box">
+                    <h3 class="info-title">position: relative</h3>
+                    <div class="info-text">
+                        Prvek zůstává v běžném toku dokumentu na svém původním místě, ale můžeme s ním opticky pohnout (pomocí top, left, right, bottom). Důležité je, že jeho původní prázdné místo se nezaplní. Slouží také jako záchytný bod pro absolutní pozicování.
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3 class="info-title">position: absolute</h3>
+                    <div class="info-text">
+                        Vytrhne prvek z běžného toku. Prvek se vznáší nad ostatními a můžeme ho umístit přesně na souřadnice pixelů v rámci jeho nejbližšího relativního rodiče. Ostatní prvky na webu dělají, jako by tam absolutní prvek vůbec nebyl.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section animate-scroll">
+            <h2 class="section-header">Moderní rozvržení pomocí Flexboxu</h2>
+            <div class="text-block">
+                Dnes se pro stavbu layoutů (mřížek, menu, galerií) používá <strong>Flexible Box Layout (Flexbox)</strong>. Je to jednorozměrný model, který se zapíná vlastností <code>display: flex</code> na nadřazeném kontejneru. Flexbox za nás automaticky počítá mezery a zarovnání všech vnitřních prvků, dokáže je roztáhnout podle volného místa a dokonale vycentrovat obsah horizontálně i vertikálně.
+            </div>
+
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                </div>
+                <div class="code-content">
+                    <span class="code-text">.kontejner {</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">display:</span> <span class="code-text">flex;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">justify-content:</span> <span class="code-text">space-between;</span><br>
+                    &nbsp;&nbsp;<span class="code-tag">align-items:</span> <span class="code-text">center;</span><br>
+                    <span class="code-text">}</span>
+                </div>
+            </div>
+
+            <ul class="tag-explanation">
+                <li>
+                    <span class="tag-name">justify-content</span>
+                    Zarovnává prvky podél hlavní osy (vodorovně). Hodnota space-between prvky rozprostře tak, že první je zcela vlevo, poslední zcela vpravo a mezery mezi nimi jsou stejné.
+                </li>
+                <li>
+                    <span class="tag-name">align-items</span>
+                    Zarovnává prvky podél křížové osy (svisle). Hodnota center zajistí dokonalé vertikální vycentrování vnitřního obsahu na střed výšky krabičky.
+                </li>
+            </ul>
+
+            <div class="lesson-nav-bar">
+                <a href="lekce.html" class="btn-return">Vrátit</a>
+                <a href="ukoly.html" class="btn-task">Úkol</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
